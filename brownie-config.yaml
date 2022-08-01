@@ -1,0 +1,33 @@
+dependencies:
+  # - <organization/repo>@<version>
+  - OpenZeppelin/openzeppelin-contracts@4.6.0
+compiler:
+  solc:
+    remappings:
+      - '@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.6.0'
+dotenv: .env
+networks:
+  default: rinkeby
+  rinkeby:
+    chain_id: '10001'
+    layer_zero: '0x79a63d6d8BBD5c6dfc774dA79bCcD948EAcb53FA'
+    verify: True
+  bsc-test:
+    chain_id: '10002'
+    layer_zero: '0x6Fcb97553D41516Cb228ac03FdC8B9a0a9df04A1'
+    verify: True
+  polygon-test:
+    chain_id: '10009'
+    layer_zero: '0xf69186dfBa60DdB133E91E9A4B5673624293d8F8'
+    verify: True
+  avax-test:
+    chain_id: '10006'
+    layer_zero: '0x93f54D755A063cE7bB9e6Ac47Eccc8e33411d706'
+    verify: True
+  mainnet-fork:
+    verify: False
+wallets:
+  DEV00: ${PRIVATE_KEY_0}
+  DEV01: ${PRIVATE_KEY_1}
+  DEV02: ${PRIVATE_KEY_2}
+  DEV03: ${PRIVATE_KEY_3}
